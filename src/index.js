@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-
 //Avatar Component
 function Avatar() {
   return (
@@ -41,27 +40,27 @@ const RetweetButton = () => <i className=" fa fa-retweet retweet-button" />;
 const LikeButton = () => <i className=" fa fa-heart like-button" />;
 
 //MoreOptionsButton
-const MoreOptionsButton = () => <i className =" fa fa-ellipsis-h more-options-button"/>
-
+const MoreOptionsButton = () => (
+  <i className=" fa fa-ellipsis-h more-options-button" />
+);
 
 //Tweet Component
 function Tweet() {
-    return (
-      <div className="tweet">
-        <Avatar />
-        <div className="content">
-          <NameWithHandle />
-          <Message />
-          <div>
-              <ReplyButton />
-              <RetweetButton />
-              <LikeButton />
-              <MoreOptionsButton />
-          </div>
-
+  return (
+    <div className="tweet">
+      <Avatar />
+      <div className="content">
+        <NameWithHandle /><Time />
+        <Message />
+        <div className = "buttons">
+          <ReplyButton />
+          <RetweetButton />
+          <LikeButton />
+          <MoreOptionsButton />
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 ReactDOM.render(<Tweet />, document.getElementById("root"));
